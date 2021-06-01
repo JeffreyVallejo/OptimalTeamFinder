@@ -22,11 +22,11 @@ class CSVFileReader {
             val csvParser = CSVParser(fileReader, CSVFormat.DEFAULT)
 
             for(record in csvParser) {
-                val pokemon = Pokemon(
-                    record[NAME],
-                    Integer.parseInt(record[BASESTAT]),
-                    record[TYPE])
-                availablePokemon.add(pokemon)
+//                val pokemon = Pokemon(
+//                    record[NAME],
+//                    Integer.parseInt(record[BASESTAT]),
+//                    record[TYPE])
+//                availablePokemon.add(pokemon)
             }
 
 //            // Print the pokemon to console.

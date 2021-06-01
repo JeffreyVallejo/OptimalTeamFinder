@@ -8,15 +8,19 @@ plugins {
 group = "me.jeff"
 version = "1.0-SNAPSHOT"
 
+sourceSets.create("integrationTest") {
+    resources.srcDir("src/resources")
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
     implementation (group= "org.apache.commons", name= "commons-csv", version = "1.5")
-    implementation (group= "org.apache.commons", name= "commons-math3", version = "3.6.1")
+    implementation ("com.google.firebase:firebase-admin:7.3.0")
     implementation (group= "com.github.dpaukov", name= "combinatoricslib3", version = "3.3.0")
-    implementation("com.github.shiguruikai:combinatoricskt:1.6.0")
+    compile ("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     testImplementation(kotlin("test-junit"))
 }
 
